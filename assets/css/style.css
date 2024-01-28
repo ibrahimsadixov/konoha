@@ -1,0 +1,71 @@
+#background{
+    height: 100vh;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    transition: background-image .3s;
+    
+}
+html{
+    scroll-behavior: smooth;
+}
+
+.largeCard{
+    height: 60vh !important;
+    width: 25% !important;
+    font-size: 3rem!important;
+}
+.largeDivCard{
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+.transition{
+    color: transparent;
+    transition: .3s;
+}
+  
+  .falling-leaves {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 100%;
+
+    transform: translate(-50%, 0);
+    
+  }
+  
+  .leaf-scene {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      transform-style: preserve-3d;
+  }
+  .leaf-scene div {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 20px;
+        height: 20px;
+        background: url(/assets/images/pngtree-brown-leaf-tree-png-image_10077524.png) no-repeat;
+        background-size: 100%;
+        transform-style: preserve-3d;
+        backface-visibility: visible;
+      }
+
+      #logo svg{
+        fill: red;
+      }
+
+      .largeCard img{
+        width: 100% !important;
+        height: auto!important;
+        object-fit: fill !important;
+      }

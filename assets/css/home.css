@@ -1,0 +1,158 @@
+#home {
+    height: 75vh;
+
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+
+.homeContainer {
+    max-width: 1440px;
+    width: 80%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    background-color: rgba(61, 27, 38, 0.5);
+    border-radius: 0 0 15px 15px;
+
+}
+
+.homeChars {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.left i {
+    cursor: pointer;
+    transition: .3s;
+}
+
+.right i {
+    cursor: pointer;
+    transition: .3s;
+}
+
+.left {
+    width: 10%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 3rem;
+    transition: .3s;
+}
+
+.right {
+    width: 10%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 3rem;
+    transition: .3s;
+}
+
+
+
+.openChar {
+    width: 100% !important;
+    transition: .3s;
+    padding: 5px;
+}
+
+.char {
+    height: 100%;
+    width: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: .3s;
+    font-weight: bolder;
+    font-weight: bold;
+    overflow: hidden;
+    transition: .3s;
+    font-family: 'Source Code Pro', monospace;
+}
+
+.charDetail img {
+    max-width: 300px;
+    max-height: 300px;
+    object-fit: fill;
+    transition: 0.3s;
+}
+
+.charDetail:hover img {
+    transform: scale(1.1);
+    transform-origin: bottom;
+    transition: 0.3s;
+}
+
+.charDetail {
+    height: 100%;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    padding: 30px;
+    text-align: center;
+    cursor: pointer;
+    gap: 30px;
+}
+
+@media only screen and (max-width: 1000px) {
+
+
+    .left i {
+        font-size: 1.8rem;
+        transition: .3s;
+    }
+
+    .right i {
+        font-size: 1.8rem;
+        transition: .3s;
+
+    }
+
+    .right {
+        padding: 10px;
+        transition: .3s;
+    }
+
+    .left {
+        padding: 10px;
+        transition: .3s;
+    }
+
+    .homeChars {
+        width: 60% !important;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+    }
+
+
+    .charDetail:hover img {
+        transform: scale(1);
+        transition: 0.3s;
+    }
+
+}
+
+
+@media only screen and (max-width: 600px) {
+
+    .charDetail img {
+        height: 55%;
+        transition: 0.3s;
+    }
+
+}

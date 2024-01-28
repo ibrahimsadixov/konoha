@@ -1,0 +1,204 @@
+main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+
+
+}
+input{
+    color: white !important;
+}
+#allCharacters {
+    min-height: 90vh;
+    width: 80%;
+    max-width: 1440px;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(61, 27, 38, 0.5);
+    gap: 15px;
+    padding-bottom: 30px;
+
+}
+
+.allCharactersList {
+    min-height: 80vh;
+    width: 90%;
+    padding: 25px;
+    gap: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  
+
+}
+
+.loadMore {
+    height: 45px;
+    width: 145px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: .3s;
+}
+
+
+.characterCard {
+   user-select: none;
+    height: 300px;
+    width: 20%;
+    min-width: 200px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    border-bottom: 3px solid rgb(61, 27, 38);
+    overflow: hidden;
+    position: relative;
+
+}
+
+.characterCard img {
+    height: 100%;
+    width: auto;
+    object-fit: cover;
+    transition: .3s;
+
+}
+
+
+.characterCard .details {
+    color: white;
+    height: 0;
+    width: 100%;
+    overflow: hidden;
+    transform-origin: bottom;
+    transition: height .3s;
+    background: rgb(77, 44, 54);
+    font-family: monospace;
+    font-weight: light;
+    word-break: break-all;
+    word-break: keep-all;
+    font-size: 1rem;
+    transition: .3s;
+}
+.charDet{
+    font-family: monospace;
+    font-weight: light;
+    font-size: 1rem;
+    color: white;
+}
+.text {
+    color: white;
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+}
+@media only screen and (min-width: 1000px) {
+    
+    .characterCard:hover .details {
+        height: 30%;
+    
+        overflow: hidden;
+        transition: height .3s;
+    
+    }
+    .characterCard:hover .innerCard {
+        transform: scale(1.1);
+        transition: .3s;
+    
+    }
+    
+    .characterCard:hover .characterCard {
+        align-items: center !important;
+        transition: .3s;
+    
+    }
+    
+    
+
+
+}
+
+
+
+.innerCard {
+
+    width: 90%;
+    height: 60%;
+    cursor: pointer;
+    transition: .3s;
+    transform-origin: bottom;
+    display: flex;
+    justify-content: center;
+    transition: .3s;
+    overflow: hidden;
+
+}
+
+
+
+.moreDetails{
+    height: 0;
+    width: 100%;
+    background-color: rgb(61, 27, 38);
+    border-radius: 10px 10px 0 0 ;
+    transition: .3s;
+}
+.moreDetailsContainer {
+    padding: 15px;
+    height: 100%;
+    width: 100%;
+    word-break: keep-all;
+    overflow-y: auto;
+    scrollbar-width: thin;  
+    scrollbar-color: rgb(61, 27, 38) rgb(77, 44, 54); 
+
+}
+
+
+    .moreDetailsContainer::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    .moreDetailsContainer::-webkit-scrollbar-thumb {
+        background-color: rgb(61, 27, 38);
+        border-radius: 4px;
+    }
+
+    .moreDetailsContainer::-webkit-scrollbar-track {
+        background-color: rgb(77, 44, 54);
+    }
+
+.mainCard{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    transition: .3s;
+
+}
+
+.close{
+    height: 0 !important;
+    transition: .3s;
+}
+
+.open{
+    height: 100% !important;
+    transition: .3s;
+}
+
+
+
+footer {
+    margin: 0 !important;
+}

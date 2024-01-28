@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./konoha.svg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/navbar.css">
+    <link rel="stylesheet" href="./assets/css/footer.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/mainAll.css">
+    <link rel="stylesheet" href="./assets/css/game.css">
+    <link rel="stylesheet" href="./assets/css/musicPlayer.css">
+
+    <title>Main Characters</title>
+</head>
+
+<body id="body" class="loading">
+    <!-- nav -->
+    <nav>
+        <div class="navContainer">
+            <div class="logo">
+                <img id="logo" src="" alt="Konoha">
+            </div>
+            <div class="links">
+                <ul>
+                    <li id="homeLi"><a class="linkNav" href="./index.htm">HOME</a></li>
+                    <li class="CHRACTERS"> <a class="linkNav" href="./allCharacters.htm">CHARACTERS</a></li>
+                    <li class="linkNav gameLi">GAME</li>
+                </ul>
+            </div>
+
+            <div class="searchContainer">
+                <div class="searchArea">
+                    <div class="searchSym"><i class="fa-solid fa-magnifying-glass"></i></div>
+                    <div class="clearInput">X</div>
+                    <input class="search" type="text" />
+                </div>
+            </div>
+
+            <i id="toggleMenu" class="fa-solid fa-bars"></i>
+
+        </div>
+    </nav>
+    <!-- mobile menu -->
+    <div id="mobileMenu">
+        <div class="mobileMenuContainer">
+            <ul>
+                <li id="homeLi"><a class="linkNav" href="./index.htm">HOME</a></li>
+                <li class="CHRACTERS"> <a class="linkNav" href="./allCharacters.htm">CHARACTERS</a></li>
+                <li class="linkNav gameLi">GAME</li>
+            </ul>
+
+            <div class="mobileSearch">
+                <div class="searchSymMobile"><i class="fa-solid fa-magnifying-glass"></i></div>
+                <input class="searchMobile" type="text">
+                <div class="clearInputMobile">X</div>
+
+
+            </div>
+        </div>
+    </div>
+    <!-- mobile menu end -->
+
+    <main>
+        <section id="allCharacters">
+            <div class="allCharactersList">
+                <!-- <div class="filter">
+                    <ul>
+                        <li id="clan">Clan</li>
+                    </ul>
+                </div> -->
+
+            </div>
+            <button class="loadMore">LOAD MORE</button>
+        </section>
+    </main>
+
+
+    <!-- footer -->
+    <footer>
+        <div class="footerContainer">
+            <p>Created by Ibrahim Sadikhov</p>
+            <div class="linksFooter">
+                <a href="https://github.com/ibrahimsadixov" target="_blank">Github</a>
+                <a href="https://www.linkedin.com/in/ibrahimsadixov/" target="_blank">Linkedin</a>
+                <a href="https://www.instagram.com/ibrahim_sadixov/" target="_blank">Instagram</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- footer end -->
+    <section id="background">
+        <div class="falling-leaves"></div>
+
+
+    </section>
+
+    <div id="audioPlayer">
+        <i class="fa-solid fa-pause"></i>
+        <audio loop id="themeSong" controls>
+            <source src="" type="audio/mp3">
+        </audio>
+    </div>
+
+    <div id="right"></div>
+    <div id="left"></div>
+
+    <div class="itachi"></div>
+    <div class="naruto"></div>
+    <div class="kakashi"></div>
+    <div class="sasuke"></div>
+    <div class="akatsuki"></div>
+    <div class="jiraiya"></div>
+    <div class="gaara"></div>
+
+
+    <script type="module">
+     
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.2/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.7.2/firebase-analytics.js";
+
+        const firebaseConfig = {
+          apiKey: "AIzaSyCxNIf_0XF0Kgcd86z8-9NOdY_Gqi-lnBg",
+          authDomain: "konoha-b5688.firebaseapp.com",
+          projectId: "konoha-b5688",
+          storageBucket: "konoha-b5688.appspot.com",
+          messagingSenderId: "653364218135",
+          appId: "1:653364218135:web:57ecbb520abdcb24388f52",
+          measurementId: "G-RQ4ZHQHPH6"
+        };
+      
+       
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+      </script>
+
+    <script src="./assets/js/index.js"></script>
+    <script src="./assets/js/searchAnimation.js"></script>
+    <script src="./assets/js/mobile.js"></script>
+    <script src="./assets/js/game.js"></script>
+    <script src="./assets/js/themeChar.js"></script>
+    <script src="./assets/js/leaves.js"></script>
+
+</body>
+
+</html>

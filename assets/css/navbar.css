@@ -1,0 +1,324 @@
+nav {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid rgb(228, 215, 215);
+    background: rgba(53, 6, 22, 0.7);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+.navContainer {
+    max-width: 1440px;
+    width: 80%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+}
+
+
+.logo img {
+    width: auto;
+    height: 70%;
+
+}
+#logo{
+   cursor: pointer;
+
+
+}
+.links {
+    width: 35%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.links ul {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    list-style-type: none;
+}
+
+.links ul li {
+   
+  font-family: 'Source Code Pro', monospace;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: .3s;
+}
+
+@media only screen and (max-width: 1400px) {
+
+    .links ul li {
+       
+        font-family: 'Source Code Pro', monospace;
+          font-weight: bold;
+          font-size: .8rem;
+          cursor: pointer;
+          transition: .3s;
+    }
+
+
+}
+@media only screen and (max-width: 1125px) {
+
+    .links ul li {
+       
+        font-family: 'Source Code Pro', monospace;
+          font-weight: bold;
+          font-size: .73rem;
+          cursor: pointer;
+          transition: .3s;
+    }
+
+
+}
+
+.links ul li:hover {
+    scale: 1.15;
+    transition: .3s;
+}
+
+.searchContainer {
+    width: 35%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.searchArea {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: flex-end;
+    
+}
+
+.searchArea .searchSym {
+    cursor: pointer;
+    font-size: 1.8rem;
+    transition: .3s;
+}
+
+.searchSym:hover {
+    
+    transition: .3s;
+}
+
+.searchArea .search {
+    width: 0;
+    height: 40px;
+    border: 0 !important;
+    border-radius: 15px;
+    background: rgba(202, 154, 170, 0.1);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(12px);
+   
+    transition: .3s;
+    
+}
+
+.searchArea .openSearch {
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    width: 60%;
+    padding-left: 15px;
+    padding-right: 30px;
+    transition: .3s;
+}
+
+#mobileMenu {
+    height: 0;
+    width: 100%;
+    position: fixed;
+    top: 100px;
+    background: rgba(94, 28, 50, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    transition: .3s !important;
+    z-index: 3;
+    
+}
+
+.mobileMenuOpen {
+    height: 23vh !important;
+    border-bottom: 1px solid rgb(228, 215, 215);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    overflow: visible !important;
+    transition: .3s !important;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.mobileMenuContainer {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+.mobileMenuContainer ul {
+    list-style-type: none;
+  font-family: 'Source Code Pro', monospace;
+    font-size: 1rem;
+  
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-weight: bold;
+  
+    
+  
+}
+.mobileMenuContainer ul li{
+    cursor: pointer;
+    width: auto;
+}
+
+#toggleMenu {
+   
+    font-size: 0;
+    display: none;
+    cursor: pointer;
+    font-size: 2rem;
+    transition: .3s;
+    
+}
+
+
+.mobileSearch{
+    display: flex;
+    align-items: center;
+    height: 60px;
+    gap: 8px;
+    width: 50%;
+    position: relative;
+}
+.mobileSearch .searchMobile{
+    border-radius: 8px;
+   border: 1 solid!important;
+   border-color:  rgba(255, 255, 255, 0.3) ;
+   height: 30px;
+   width: 95%;
+   padding-left: 10px;
+   padding-right: 10px;
+   background: rgba(202, 154, 170, 0.1);
+   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+   backdrop-filter: blur(2px);
+   -webkit-backdrop-filter: blur(12px);
+
+  
+}
+
+
+@media only screen and (max-width: 1000px) {
+    #toggleMenu {
+        display: flex;
+    }
+
+    .searchContainer {
+        display: none;
+    }
+
+    .links {
+        display: none;
+    }
+
+
+}
+.clearInput{
+    position: absolute;
+    right: 15px;
+    color: white;
+    z-index: 9;
+    font-size: 1rem;
+    width: 0;
+    overflow: hidden;
+    transition: .3s;
+    cursor: pointer;
+  
+}
+.clearInputOpen{
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    height: 1.2rem;
+    width: 1.2rem;
+    border-radius: 50%;
+    transition: .3s;
+}
+.searchArea{
+    position: relative;
+}
+.searchMobile{
+    position: relative;
+}
+.clearInputMobile{
+    position: absolute;
+    right: 2%;
+    color: white;
+    z-index: 9;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    height: 1.2rem;
+    width: 1.2rem;
+    border-radius: 50%;
+    transition: .3s;
+    overflow: hidden;
+    transition: .3s;
+    cursor: pointer;
+  
+}
+
+
+@media only screen and (max-height: 545px) {
+#mobileMenu ul{
+    font-size: .8rem !important;
+}
+
+}
+
+
+
+@media only screen and (max-height: 545px) {
+    #mobileMenu ul{
+        font-size: .8rem !important;
+    }
+    
+    }
+    
